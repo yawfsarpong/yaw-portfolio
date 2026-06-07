@@ -1,0 +1,330 @@
+.about-page { padding-top: 64px; }
+
+.about-hero {
+  padding: var(--sp-12) 0 var(--sp-16);
+}
+
+.about-hero__inner { position: relative; }
+
+.about-back {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--c-text-3);
+  letter-spacing: 0.03em;
+  transition: color 0.2s ease;
+  display: inline-block;
+  margin-bottom: var(--sp-6);
+}
+.about-back:hover { color: var(--c-text-2); }
+
+.about-hero__name {
+  font-size: clamp(64px, 10vw, 120px);
+  font-weight: 300;
+  letter-spacing: -0.03em;
+  line-height: 0.95;
+  color: var(--c-text-1);
+  margin-bottom: var(--sp-4);
+}
+
+.about-hero__role {
+  font-size: 15px;
+  color: var(--c-text-3);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+/* Bio */
+.about-bio {
+  border-top: 1px solid var(--c-border);
+}
+
+.about-bio__inner {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--sp-12);
+}
+
+@media (min-width: 768px) {
+  .about-bio__inner {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--sp-16);
+    align-items: start;
+  }
+}
+
+.about-bio__p {
+  font-size: 18px;
+  font-weight: 300;
+  color: var(--c-text-2);
+  line-height: 1.65;
+  margin-top: var(--sp-3);
+}
+
+.about-bio__aside {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-6);
+  padding-top: var(--sp-2);
+}
+
+.about-aside__val {
+  font-size: 15px;
+  color: var(--c-text-2);
+  margin-top: var(--sp-1);
+  line-height: 1.5;
+}
+
+/* Skills */
+.about-skills {
+  background: var(--c-surface);
+  border-top: 1px solid var(--c-border);
+  border-bottom: 1px solid var(--c-border);
+}
+
+.about-skills__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--sp-8);
+  margin-top: var(--sp-6);
+}
+
+@media (min-width: 640px) {
+  .about-skills__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .about-skills__grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--sp-6);
+  }
+}
+
+.about-skills__category {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--c-text-3);
+  margin-bottom: var(--sp-3);
+}
+
+.about-skills__items {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-2);
+}
+
+.about-skills__item {
+  font-size: 15px;
+  color: var(--c-text-2);
+  padding: 6px 0;
+  border-bottom: 1px solid var(--c-border);
+}
+
+/* Experience */
+.about-exp__list {
+  margin-top: var(--sp-6);
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.about-exp__item {
+  padding: var(--sp-6) 0;
+  border-bottom: 1px solid var(--c-border);
+}
+
+.about-exp__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: var(--sp-4);
+  flex-wrap: wrap;
+  margin-bottom: 4px;
+}
+
+.about-exp__role {
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--c-text-1);
+  letter-spacing: -0.01em;
+}
+
+.about-exp__period {
+  font-size: 12px;
+  color: var(--c-text-3);
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  flex-shrink: 0;
+}
+
+.about-exp__org {
+  font-size: 13px;
+  color: var(--c-green-light);
+  margin-bottom: var(--sp-2);
+}
+
+.about-exp__detail {
+  font-size: 15px;
+  color: var(--c-text-2);
+  line-height: 1.6;
+  max-width: 640px;
+}
+
+/* Contact */
+.about-contact {
+  border-top: 1px solid var(--c-border);
+}
+
+.about-contact__inner { max-width: 720px; }
+
+.about-contact__heading {
+  font-size: clamp(32px, 5vw, 56px);
+  font-weight: 300;
+  letter-spacing: -0.025em;
+  line-height: 1.15;
+  color: var(--c-text-1);
+  margin-top: var(--sp-3);
+  margin-bottom: var(--sp-8);
+}
+
+.about-contact__links {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-2);
+}
+
+.about-contact__link {
+  font-size: 15px;
+  color: var(--c-text-2);
+  transition: color 0.2s ease;
+}
+.about-contact__link:hover { color: var(--c-text-1); }
+
+.about-contact__link--primary {
+  font-size: 22px;
+  font-weight: 300;
+  color: var(--c-text-1);
+}
+.about-contact__link--primary:hover { color: var(--c-green-light); }
+
+/* Profile photo */
+.about-photo-wrap {
+  margin-bottom: var(--sp-2);
+}
+
+.about-photo {
+  width: 112px;
+  height: 112px;
+  border-radius: 4px;
+  object-fit: cover;
+  object-position: center top;
+  border: 1px solid var(--c-border);
+  display: block;
+}
+
+/* ── About Contact Form ────────────────────────────────────────── */
+.about-contact__form {
+  margin-top: var(--sp-6);
+  margin-bottom: var(--sp-6);
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-4);
+  max-width: 600px;
+}
+
+.about-contact__row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--sp-3);
+}
+@media (max-width: 600px) { .about-contact__row { grid-template-columns: 1fr; } }
+
+.about-contact__field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.about-contact__label {
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--c-text-3);
+}
+
+.about-contact__input,
+.about-contact__textarea {
+  background: transparent;
+  border: 1px solid var(--c-border);
+  border-radius: 4px;
+  padding: 14px 16px;
+  font-size: 15px;
+  font-family: inherit;
+  color: var(--c-text-1);
+  transition: border-color 0.2s ease;
+  resize: none;
+  width: 100%;
+  box-sizing: border-box;
+}
+.about-contact__input::placeholder,
+.about-contact__textarea::placeholder { color: var(--c-text-4, #9a9a95); }
+.about-contact__input:focus,
+.about-contact__textarea:focus { outline: none; border-color: var(--c-text-2); }
+
+.about-contact__actions {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-4);
+  flex-wrap: wrap;
+}
+
+.about-contact__submit {
+  background: var(--c-text-1);
+  color: var(--c-bg);
+  border: none;
+  border-radius: 4px;
+  padding: 14px 32px;
+  font-size: 14px;
+  font-family: inherit;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+.about-contact__submit:hover { opacity: 0.75; }
+
+.about-contact__note {
+  font-size: 12px;
+  color: var(--c-text-3);
+}
+
+.about-contact__thanks {
+  font-size: 17px;
+  color: var(--c-text-2);
+  margin-top: var(--sp-6);
+  line-height: 1.6;
+}
+
+.about-contact__inline {
+  color: var(--c-text-1);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.about-contact__links {
+  margin-top: var(--sp-8);
+  display: flex;
+  gap: var(--sp-4);
+}
+
+/* ── LinkedIn icon in about-contact links ─────────────────────────── */
+.about-contact__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
