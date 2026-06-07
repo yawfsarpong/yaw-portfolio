@@ -134,7 +134,7 @@ function ProjectCard({ project, index, size = 'primary' }) {
 function FeaturedScene() {
   const primary = getPrimary()
   return (
-    <section className="section featured">
+    <section id="projects" className="section featured">
       <div className="container">
         <Reveal className="section__header">
           <div className="label">Featured Projects</div>

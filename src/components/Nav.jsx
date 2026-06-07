@@ -63,18 +63,21 @@ export default function Nav() {
             >
               <div className="nav__menu-links">
                 {[
-                  { to: '/', label: 'Home' },
-                  { to: '/about', label: 'About' },
-                  { to: '/?scroll=projects', label: 'Projects' },
-                  { to: '/#contact', label: 'Contact' },
-                ].map(({ to, label }, i) => (
+                  { href: '/', label: 'Home', isRoute: true },
+                  { href: '/about', label: 'About', isRoute: true },
+                  { href: '/#projects', label: 'Projects', isRoute: false },
+                  { href: '/#contact', label: 'Contact', isRoute: false },
+                ].map(({ href, label, isRoute }, i) => (
                   <motion.div
                     key={label}
                     initial={{ opacity: 0, x: 30 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.5, delay: 0.1 + i * 0.07, ease: [0.16, 1, 0.3, 1] }}
                   >
-                    <Link to={to} className="nav__menu-link">{label}</Link>
+                    {isRoute
+                      ? <Link to={href} className="nav__menu-link">{label}</Link>
+                      : <a href={href} className="nav__menu-link">{label}</a>
+                    }
                   </motion.div>
                 ))}
               </div>
